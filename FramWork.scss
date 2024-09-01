@@ -1,0 +1,84 @@
+$mapped-colors: (
+  $primary-color: #007bff,
+  $secondary-color: #6c757d,
+  $success-color: #28a745,
+  $danger-color: #dc3545,
+  $warning-color: #ffc107,
+  $info-color: #17a2b8,
+  $light-color: #f8f9fa,
+  $dark-color: #343a40,
+);
+
+@each $key, $value in $mapped-colors {
+  @for $i from 1 through 9 {
+    .text-#{key}-#{$i}00 {
+      background-color: darken($value, $i * 5%);
+    }
+    .text-#{key}-#{$i}00 {
+      background-color: lighten($value, $i * 5%);
+    }
+  }
+}
+
+@each $key, $value in $mapped-colors {
+  @for $i from 1 through 9 {
+    .text--#{key}-#{$i}00 {
+      color: darken($value, $i * 5%);
+    }
+    .text-#{key}-#{$i}00 {
+      color: lighten($value, $i * 5%);
+    }
+  }
+}
+
+////////////////////////////////////
+
+$base-spacing: 0.25rem;
+
+@for $i from 0 through 5 {
+  .m-#{$i} {
+    margin: #{$base-spacing * $i};
+  }
+}
+
+@for $i from 0 through 5 {
+  .p-#{$i} {
+    padding: #{$base-spacing * $i};
+  }
+}
+
+
+///////////////////////////////
+
+
+$base-font-size: 1rem;
+
+@for $i from 1 through 5 {
+  .fs-#{$i} {
+    font-size: #{$base-font-size * $i};
+  }
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+/////////////////////////////
+
+
+@for $i from 0 through 12 {
+  .w-#{$i} {
+    width: #{$i * 8.33333%};
+  }
+}
+
+
+@for $i from 0 through 12 {
+  .h-#{$i} {
+    height: #{$i * 8.33333%};
+  }
+}
